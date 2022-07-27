@@ -1,3 +1,5 @@
+import java.util.Arrays;
+import java.util.Random;
 import java.util.Scanner;
 
 public class Movies {
@@ -13,7 +15,17 @@ public class Movies {
         time = playTime;
     }
 
-
+    /** generates randomly seats that are taken**/
+    public void randomSeatGenerator() {
+        Random rand = new Random();
+        int rowNumber = rand.nextInt(1,6);
+        int columnNumber = rand.nextInt(1,12);
+        for (int i = 0;i <= rowNumber;i++){
+            for(int j = 0; j <= columnNumber;j++) {
+                seats[i][j] = 1;
+            }
+        }
+    }
 
     public void mainWindow() {
         Scanner sc = new Scanner(System.in);
@@ -26,4 +38,5 @@ public class Movies {
         int columnNumber = sc.nextInt();
 
     }
+
 }
