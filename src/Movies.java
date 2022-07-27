@@ -25,10 +25,11 @@ public class Movies {
             }
         }
     }
-
+    /** checking if the seat is taken or not**/
     public Boolean seatChecker(int rowNumber,int columnNumber) {
         return seats[rowNumber][columnNumber] != 1;
     }
+    /**main window to call the other fuctions **/
     public void mainWindow() {
         randomSeatGenerator();
         Scanner sc = new Scanner(System.in);
