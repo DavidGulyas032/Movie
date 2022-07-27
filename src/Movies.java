@@ -27,16 +27,37 @@ public class Movies {
         }
     }
 
+    public void seatChecker(int rowNumber,int columnNumber) {
+        if (seats[rowNumber][columnNumber] == 1) {
+            System.out.println("The seat is taken, please choose another one");
+        }
+    }
     public void mainWindow() {
+        randomSeatGenerator();
         Scanner sc = new Scanner(System.in);
+        int option = 2;
+
         System.out.println("Welcome to our cinema!");
         System.out.println("I see you are watching the movie called: " + this.movieName+ " It is a great choice!");
-        System.out.println("The only thing left is to choose your seat!");
-        System.out.println("In witch row you want to sit? There are 6 rows here, please choose on from 1-6 : ");
-        int rowNumber = sc.nextInt();
-        System.out.println("One row contains 12 seats, please choose one from 1-12: ");
-        int columnNumber = sc.nextInt();
+        System.out.println("You can choose from two options:");
+        System.out.println("[1] Choose your seat to watch the movie ");
+        System.out.println("[2] Exit ");
+        while(option !=2) {
+
+            switch (option) {
+                case 1:
+                    System.out.println("The only thing left is to choose your seat!");
+                    System.out.println("In witch row you want to sit? There are 6 rows here, please choose on from 1-6 : ");
+
+                    int rowNumber = sc.nextInt();
+                    System.out.println("One row contains 12 seats, please choose one from 1-12: ");
+                    int columnNumber = sc.nextInt();
+
+
+            }
+        }
+        }
 
     }
 
-}
+
